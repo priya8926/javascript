@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("1")
+                reject(new Error)
+            },5000)
+        })
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("2")
+            },2000)
+        })
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("3")
+            },3000)
+        })
+        p1.then(()=>{
+            console.log('value 1')
+        })
+        p2.then(()=>{
+            console.log('value 2')
+        })
+        p3.then(()=>{
+            console.log('value 3')
+        })
+        
+        var promise_all = Promise.all([p1,p2,p3]) // excete in a single time  jeno time vadhre hoy a time
+        // let promise_all = Promise.allSettled([p1,p2,p3]) // error sivay na bija fulfilled thay
+        // let promise_all = Promise.race([p1,p2,p3]) // jeno time ochho hoy ae pela ececute thay
+        // let promise_all = Promise.any([p1,p2,p3]) // jeno time ochho hoy ae pela ececute thay
+    //    let promise_all= Promise.resolve(6)
+    // let promise_all = Promise.reject(new Error)
+        promise_all.then((value)=>{
+            console.log(value)
+        })
+    </script>
+</body>
+</html>

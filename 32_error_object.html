@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // try{
+        //     // priya
+        //     // throw new Error("priya from computer engineering")
+        //     throw new ReferenceError("priya from computer engineering")
+
+        // }
+        // catch(err){
+        //     console.log(err)
+        //     console.log(err.name) // display error name
+        //     console.log(err.message)
+        // }
+
+        // try {
+        //     let age = prompt("Enter your Age...")
+        //     age = Number.parseInt(age)
+        //     if (age > 18)
+        //         throw new Error("you  can drive")
+        // }
+        // catch(e) {
+        //     console.log(e)
+        // }
+
+        //finally block
+        const f = () => {
+            try {
+                let a = 0;
+                // console.log(p1)
+                console.log("program runs sucessfully...")
+                return;
+            }
+            catch (err) {
+                console.log("this is an error")
+                // console.log(P2)
+            }
+            finally {
+                console.log("i am finally block element ") // must run thay if catch ma error hoy to pan exceute thay
+            }
+        }
+        f();
+        console.log("End") 
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    const hello = () =>{
+    //     console.log("hello");
+    //    }
+    //    hello();
+
+    const x ={
+        name : "priya",
+        role : "js developer",
+        exp : 2 ,
+        show : function(){
+            // let that = this
+            // console.log(this)
+            setTimeout(()=>{
+                console.log(`the name is ${this.name} \n the role is ${this.role}`)
+            },2000)
+
+        }
+    }
+    x.show()
+    </script>
+</body>
+</html>

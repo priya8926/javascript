@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [4,8,9,2,5,46]
+        // let [a,,b,c,d , ...rest] = arr
+        // console.log(a,b,c,d, rest)
+
+        // let [a,,,d , ...rest] = arr
+        // console.log(a, rest)
+
+        // let {a,b} = {a:1 , b:2}
+        // console.log(a,b)
+
+        //spread operator
+        let arr1 = [3,5,8]
+        let obj1 = {...arr1}
+        console.log(obj1)
+
+        function sum(v1,v2,v3){
+            return v1+v2+v3;
+        }
+        console.log(sum(...arr1))
+        
+        let obj2 = {
+            name :"priya" , 
+            company :"abc",
+            address : "xyz"
+        }
+        console.log({...obj2 ,name:"payal"})
+    </script>
+</body>
+</html>

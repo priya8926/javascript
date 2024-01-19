@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object orinted programming</title>
+</head>
+<body>
+    <script>
+  let a = {
+    name : "priya",
+    language : "javascipt"
+  }
+  console.log(a)
+
+  let p = {
+    run: ()=>{
+        alert("run")
+    }
+  }
+  p.__proto__ = {
+    fruit : 'mango'
+  }
+   a.__proto__= p
+   a.run();
+   console.log(a.fruit)
+    </script>
+</body>
+</html>

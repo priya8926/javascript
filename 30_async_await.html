@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function priya(){
+            let delhi = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    resolve("27 deg")
+                }, 2000);
+            })
+            let gujrat = new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    resolve("30 deg")
+                }, 3000);
+            })
+        delhi.then(alert);
+        gujrat.then(alert);
+
+        // priya().then((x)=>{
+        //     alert(x)
+        // })
+        let delhiw= await delhi // ahiya stop thay jay aa excute thay pachhi j agad jay
+        let gujratw = await gujrat
+        return [delhiw , gujratw]
+        }
+
+        console.log("welcome to whether control room")
+       let p= priya()
+       console.log(p)
+    </script>
+</body>
+</html>

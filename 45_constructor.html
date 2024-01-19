@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class employee {
+            constructor(name) {
+                console.log(` ${name} - employee's constructor is created`)
+                this.name = name
+            }
+            login() {
+                console.log(`employee has logged in`)
+            }
+            logout() {
+                console.log(`employee has logged out`)
+            }
+            requestleaves(leaves) {
+                console.log(`employee request ${leaves} leaves - auto`)
+            }
+        }
+        class programmer extends employee {
+            // constructor() {--> if there is no constructor in child class , it is created automatically
+            //     super()
+            // }
+            requestleaves(x) {
+                super.requestleaves(4)
+                console.log("one extra is granted")
+                // console.log(`programmer request ${x+1} leaves(one extra)`)
+            }
+            coffe() {
+                console.log(`programmers drinking coffe`)
+            }
+        }
+        let pro = new programmer("priya")
+        // pro.requestleaves(4)
+        // pro.coffe()
+    </script>
+</body>
+
+</html>

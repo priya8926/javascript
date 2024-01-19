@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello 
+    <span id="first" hidden>Hey I am Span</span>
+<script>
+    console.log(document.getElementsByTagName("span")[0])
+    console.dir(document.getElementsByTagName("span")[0]) // returns an object
+    console.log(document.body.firstChild.nodeName)
+    console.log(document.body.firstElementChild.nodeName)
+    first.innerHTML
+    first.innerHTMl = "<i>Hey iam italic </i>"
+    first.outerHTML
+    first.outerHTML = "<div>Hii</div>"
+    console.log(document.body.firstChild.data)
+    console.log(document.body.firstChild.nodeValue)
+    console.log(document.body.textContent)
+    // first.hidden = false
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- que 1 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Contest</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Programming Contest</h1>
+            <p class="lead">Welcome to our programming contest! This contest is designed to test your coding skills and problem-solving abilities. Whether you are a seasoned programmer or a beginner, this contest will challenge and improve your coding prowess.</p>
+            <hr class="my-4">
+            <p>To participate, you'll need to register on our contest platform and create an account. Once registered, you will gain access to the contest environment, where you can submit your solutions. The contest will be held online, allowing you to participate from anywhere in the world.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+        <div  id = "cardContainer"class="row" style="justify-content: center">
+            
+        </div>
+    </div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script>
+        let url = "https://kontests.net/api/v1/all"
+        let response = fetch(url)
+        response.then((v) =>{
+                     return v.json();            
+        }).then((contest) =>{
+            console.log(contest)
+            ihtml = " "
+            for(item in contest){
+                console.log(contest[item])
+                ihtml += `
+                <div class="card" style="width: 22rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3WuslWgMDmn3VZ9bktRigOki8oovpzWZ3DA&usqp=CAU"class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${contest[item].name}</h5>
+                    <p class="card-text"> Status is ${contest[item].status} and site is  ${contest[item].site}</p>
+                    <p class="card-text"> in 24 hours? ${contest[item].in_24_hours}</p>
+                    <p>Starts at : ${contest[item].start_time}</p>
+                    <p>Ends at : ${contest[item].end_time}</p>
+                    <a href= "${contest[item].url}" class="btn btn-primary">visit contents</a>
+                </div>
+            </div>
+                `
+            }
+            cardContainer.innerHTML = ihtml
+        })
+
+    </script>
+</body>
+
+</html>

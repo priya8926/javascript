@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random joke</title>
+</head>
+<body>
+  <div class="joke"></div>
+    <script>
+
+   let arr = [
+   `1. Jokes with pun
+A pun is a “play on words”, so this type of joke plays with different meanings of a word, or is based on words which sound the same – but which have a different meaning.
+
+Here’s an example of words that sound the same.
+
+“I went to the zoo the other day. There was only a dog in it – it was a shihtzu.”
+
+Explanation: A shihtzu is a type of dog. But when you say “shihtzu” it sounds like “sh*t zoo”, meaning “a terrible zoo”.
+
+(By the way, this joke is also an example of a “one-liner” – a joke in just one sentence.)
+
+Here’s another example of different meanings of a word.
+
+“Two aerials get married. The ceremony was rubbish – but the reception was brilliant.”
+
+Explanation: Reception can mean the party after the wedding, OR the signal on your TV or phone",`,
+
+`2. “A man walks into a bar” joke
+A lot of jokes start with this sentence. Then the joke continues with a little story about a man in a bar. But, a bar is also a hard piece of wood or metal, so you also get jokes like this:
+
+Example 1
+A man walks into a bar.
+Ouch!
+
+Explanation: “Ouch” is what we say when we hurt ourselves.
+
+Example 2
+A dyslexic man walks into a bra.
+
+Explanation: If you are dyslexic, you have difficulty with letters. Instead of b-a-r, the word is b-r-a (which means women’s underwear.)`,
+
+`3. Mother-in-law jokes
+Men often tell these jokes, and they’re also considered a little sexist and old-fashioned. Here’s an example:
+
+“My mother-in-law fell down a wishing well. I was amazed – I never knew they worked.”
+
+Explanation: A wishing well is a well (place where you can lower a bucket to bring up water) where you can make a wish – and it happens.`,
+
+`4. Cultural jokes
+These are based on shared cultural knowledge, which makes them hard to understand. Here’s an example:
+
+Doctor, I can’t stop singing The Green Green Grass of Home.
+He says “That sounds like Tom Jones syndrome.”
+“Is it common?” I asked.
+“It’s not unusual” he replied.
+
+Explanation: “It’s not unusual” is a famous song by Tom Jones.`,
+
+`5. Doctor jokes
+A “doctor” joke is a joke based on an imaginary situation when a patient explains a problem to the doctor. Here’s an example:
+
+Patient: Doctor, I have a pain in my eye whenever I drink tea.
+Doctor: Take the spoon out of the mug before you drink.`,
+
+`6. Lightbulb jokes
+These always start “How many (type of person) does it take to change a lightbulb?” Here’s my all-time favourite:
+
+“How many members of the Socialist Workers’ Party does it take to change a lightbulb?”
+“About a million. One out, all out.”
+
+Explanation: “One out, all out” was a slogan used by the Socialist Workers’ Party to get everyone to “come out” on strike / take industrial action.
+When we say a lightbulb is out, we mean it no longer works.`,
+
+`7. Three… jokes
+Jokes are often told as little stories, where there are three types of people. A typical example is “An Englishman, A Scottish man and a Welshman …” Often it’s an Irishman instead of Welshman. These jokes are often negative about the stereotypes of these three countries. But here’s an alternative:
+
+A Doberman, a Golden Retriever and a cat died and met God. God said to them, “Tell me why I should let you into heaven.”
+The Doberman said, “I’ll protect you with my life.”
+God said, “You can sit at my right side.”
+The Golden Retriever said, “I will fetch your slippers and anything else you ask me to.”
+God said, “Then you can sit at my left side.”
+Finally, God looked at the cat and said, “And what will you do?”
+The cat said, “Excuse me. I think you’re sitting in my seat.”
+
+Explanation: If you’re a cat owner, you don’t need an explanation for this joke!
+
+The people’s funniest joke
+This is the joke that was voted the funniest in a survey of 36,000 people.
+
+A woman gets on a bus with her baby. The driver says “Ugh – that’s the ugliest baby I’ve ever seen!”
+The woman walks to the back of the bus and sits down.
+She says to the man next to her: “The driver just insulted me!”
+The man says: “You go up there and tell him off. Go on. I’ll hold your monkey for you.”`]
+  
+  let a = Math.floor(Math.random()*joke.length-1);
+  joke.innerHTML = arr[a].joke
+ 
+</script> 
+</body>
+</html>

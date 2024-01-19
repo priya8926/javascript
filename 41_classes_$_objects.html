@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class railwayform {
+            submit() {
+                console.log(this.name + ": your form is submitted...");
+            }
+            cancle() {
+                console.log(this.name + ": your form is cancled!!!")
+            }
+            fill(yourname) {
+                this.name = yourname
+            }
+        }
+
+        let priya = new railwayform();
+        priya.fill("dear priya")
+
+        let jay = new railwayform();
+        jay.fill("dear jay")
+        priya.submit();
+        jay.submit();
+        jay.cancle();
+    </script>
+</body>
+
+</html>

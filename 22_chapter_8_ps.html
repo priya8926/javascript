@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb2{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- problem 1
+    <button onclick = "alert('priya')">priya</button>
+    <button onclick = "alert('payal')">payal</button>
+    <button onclick = "alert('jay')">jay</button>
+
+    problem 2
+    <h1>Bookmarks</h1>
+    <a ><button id="google">google</button></a>
+    <a href="https://facebook.com"><button id="fb">facebook</button></a>
+    <a href="https://insta.com"><button id="insta">instagram</button></a> -->
+
+    <!-- problem 5 -->
+    <div id= "bulb" class=" bulb2">
+    </div>
+</body>
+<script>
+    // // problem 3
+    // document.getElementById('google').addEventListener('click' , function(){
+    //     window.location = "https://www.google.com"
+    // })
+
+    // //problem 4
+    // setInterval(async function(){
+    //     let url = "https://jsonholder.typicode.com/todos/1"
+    //     console.log(await fetchContent(url))
+    // },1000)
+
+    setInterval(async function(){
+       document.querySelector("#bulb").classList.toggle("bulb2")
+
+    },300)
+
+</script>
+</html>

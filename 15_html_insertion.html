@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    i am start of the container(outrer)
+    <div class="container">
+        i am start of container(inner)
+        <div id="first">I am first Element</div>
+        i am end of the container(inner)
+    </div>
+    i am end ofthe container(outer)
+</body>
+<script>
+    let a = document.getElementsByTagName("div")[0]
+    // a.innerHTML = a.innerHTML + "<h1> Hello World</h1>"
+    let div = document.createElement("div")
+    div.innerHTML = div.innerHTML + "<h2>Hello World!!</h2>"
+    a.append(div)
+    // a.prepend(div) // container na starting add thay
+    a.before(div) // div pehla add thay
+    a.after(div)
+    // a.replaceWith(div) // div ni jagye add kare
+</script>
+</html>

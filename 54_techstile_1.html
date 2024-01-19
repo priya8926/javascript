@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Determine the factors of a number (i.e., all positive integer values that evenly divide into a number) and then return the ph element of the list, sorted ascending. If there is no pth element, return 0. In java script -->
+
+    <script>
+        function getSortedFactorElement(number, p) {
+  // Function to find factors of a number
+  function findFactors(num) {
+    const factors = [];
+    for (let i = 1; i <= num; i++) {
+      if (num % i === 0) {
+        factors.push(i);
+      }
+    }
+    return factors;
+  }
+
+  // Get the factors of the input number
+  const factors = findFactors(number);
+
+  // Sort the factors in ascending order
+  factors.sort((a, b) => a - b);
+  console.log(factors)
+
+  // Return the pth element from the sorted factors array
+  if (p > 0 && p <= factors.length) {
+    return factors[p - 1];
+  } else {
+    return 0;
+  }
+}
+
+// Example usage:
+const number = 20;
+const p = 3;
+const result = getSortedFactorElement(number, p);
+console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id1" class="hey" data-game = "mario" data-name="priya">I am a first container</div>Hello world
+</body>
+<script>
+    let a = id1.getAttribute("class")
+    console.log(a)
+    console.log(id1.hasAttribute("class")) //id1 pase class attribute chhe
+    console.log(id1.hasAttribute("style")) // id1 pase style attribute nathi
+    //  id1.setAttribute("hidden" , "true") // id1 na element  ne hidden kari dey
+    id1.setAttribute("class" , "priya piyu") // class add kare
+    id1.removeAttribute("class") // class remove kare
+    console.log(id1.attributes)
+    console.log(id1.dataset)
+    console.log(id1.dataset.game)
+    console.log(id1.dataset.name)
+
+</script>
+</html>

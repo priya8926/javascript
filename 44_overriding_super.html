@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+            login(){
+                console.log(`employee has logged in`)
+            }
+            logout(){
+console.log(`employee has logged out`)
+            }
+            requestleaves(leaves){
+                console.log(`employee request ${leaves} leaves - auto`)
+            }
+        }
+        class programmer extends employee{
+
+            requestleaves(x){
+                super.requestleaves(4)
+                console.log("one extra is granted")
+                // console.log(`programmer request ${x+1} leaves(one extra)`)
+            }
+            coffe(){
+                console.log(`programmers drinking coffe`)
+            }
+        }
+        let emp =  new employee()
+        emp.logout();
+        emp.requestleaves(4)
+        let pro = new programmer()
+        pro.requestleaves(4)
+        pro.coffe()
+    </script>
+</body>
+</html>
